@@ -8,4 +8,4 @@ client = TestClient(app)
 def test_read_main():
     response = client.get("/ping")
     assert response.status_code == 200
-    assert response.json() == {"msg": "Server is up!"}
+    assert response.json() == {"message": "Server is up!"}
