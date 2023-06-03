@@ -1,9 +1,10 @@
-import text_preprocessing
+from app.text_preprocessing import Tokenization, ByWord, ByCharacter
 
 
 def main():
     # Create the context object and set the initial strategy
-    context = text_preprocessing.Tokenization(text_preprocessing.ByWord())
+
+    context: Tokenization = Tokenization(strategy=ByWord())
 
     sample_text = "Hahaha Funny App"
     # Execute the strategy
@@ -11,7 +12,7 @@ def main():
     print(tokens1)
 
     # Change the strategy dynamically
-    context.strategy = text_preprocessing.ByCharacter()
+    context.strategy = ByCharacter()
     tokens2 = context.execute_strategy(sample_text)
     print(tokens2)
 

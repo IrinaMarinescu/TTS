@@ -2,12 +2,7 @@ import nltk
 from nltk.tokenize import word_tokenize
 
 
-class Tokenization:
-    def __init__(self, strategy):
-        self.strategy = strategy
-
-    def execute_strategy(self, text):
-        self.strategy.execute(text)
+# nltk.download('punkt')
 
 
 class Strategy:
@@ -21,5 +16,13 @@ class ByCharacter(Strategy):
 
 
 class ByWord(Strategy):
-    def execute(self, text):
-        return word_tokenize(text)
+    def execute(self, input_text: str):
+        return word_tokenize(input_text)
+
+
+class Tokenization:
+    def __init__(self, strategy: Strategy):
+        self.strategy = strategy
+
+    def execute_strategy(self, input_text: str):
+        return self.strategy.execute(input_text)
