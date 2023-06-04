@@ -1,4 +1,7 @@
 from nltk.tokenize import sent_tokenize
+import nltk
+
+nltk.download('punkt')
 
 
 class Sentence_Segmentation_Strategy:
