@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from app.text_preprocessing import Tokenization, ByWord, ByCharacter
+from app.tokenization import Tokenization, ByWord, ByCharacter
 
 
 class TestTextPreprocessing(TestCase):
