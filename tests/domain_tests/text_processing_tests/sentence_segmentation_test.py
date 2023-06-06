@@ -1,4 +1,4 @@
-from app.sentence_segmentation import Sentence_Segmentation_Strategy, Sentence_Segmentation_Library
+from app.domain.text_processing.sentence_segmentation import Sentence_Segmentation_Strategy, Sentence_Segmentation_Library
 
 
 def _assert_strategy(input_text, expected_result):
